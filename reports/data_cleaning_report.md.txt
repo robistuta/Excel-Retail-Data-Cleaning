@@ -1,0 +1,186 @@
+# Retail Data Cleaning and Sales Analysis Report
+
+## 1. Project Overview
+
+This project demonstrates data cleaning, data quality assessment,
+and sales analysis using Microsoft Excel 2013.
+
+The analysis uses a sample of 10,000 transaction records from
+the UCI Online Retail dataset.
+
+The objective was to prepare reliable sales data, identify
+data quality issues, and create an interactive-style sales
+dashboard using Excel PivotTables and charts.
+
+## 2. Dataset Information
+
+Source: UCI Machine Learning Repository
+Dataset: Online Retail
+
+Dataset URL:
+https://archive.ics.uci.edu/dataset/352/online+retail
+
+Original dataset: Approximately 541,909 transaction records.
+
+Sample analyzed: 10,000 transaction records.
+
+Original columns:
+- InvoiceNo
+- StockCode
+- Description
+- Quantity
+- InvoiceDate
+- UnitPrice
+- CustomerID
+- Country
+
+## 3. Data Quality Assessment
+
+| Metric | Before Cleaning | After Cleaning |
+|---|---:|---:|
+| Total Records | 10,000 | 9,658 |
+| Missing Customer IDs | 2,291 | 2,246 |
+| Missing Descriptions | 42 | 0 |
+| Cancelled Transaction Rows | 100 | 0 |
+| Invalid Quantities | 130 | 0 |
+| Invalid Prices | 46 | 0 |
+| Duplicate Rows | 196 | 0 |
+
+The cleaning process removed 342 rows, representing 3.42%
+of the original sample.
+
+The final cleaned dataset contains 9,658 rows.
+
+## 4. Data Cleaning Process
+
+### Step 1: Remove Duplicate Records
+
+Identified and removed 196 duplicate rows using Excel's
+Remove Duplicates feature.
+
+### Step 2: Identify Cancelled Transactions
+
+Created a helper column using the formula:
+
+=IF(LEFT(A2&"",1)="C","Cancelled","Valid")
+
+Removed 100 transaction rows marked as cancelled.
+
+### Step 3: Validate Quantities
+
+Checked the Quantity column for zero or negative values.
+
+The final cleaned dataset contains no invalid quantities.
+
+### Step 4: Remove Invalid Prices
+
+Identified and removed 46 rows with zero or negative UnitPrice.
+
+### Step 5: Handle Missing Descriptions
+
+Verified that the cleaned dataset contained no missing
+product descriptions.
+
+### Step 6: Handle Missing Customer IDs
+
+Retained 2,246 rows with missing Customer IDs because
+they may represent valid transactions.
+
+### Step 7: Calculate Total Sales
+
+Created a new column called Total_Sales.
+
+Formula:
+
+=Quantity * UnitPrice
+
+In Excel:
+
+=D2*F2
+
+## 5. Sales Analysis Results
+
+| Metric | Result |
+|---|---:|
+| Total Sales | £183,529.13 |
+| Total Units Sold | 89,371 |
+| Unique Invoices | 424 |
+| Average Sales per Invoice | £432.85 |
+| Average Sales per Transaction Row | £19.00 |
+| Cleaned Records | 9,658 |
+
+## 6. Key Business Insights
+
+### Sales by Country
+
+The United Kingdom generated £167,651.80 in sales,
+representing approximately 91.35% of total sales.
+
+This shows that the UK was the dominant market
+within the analyzed sample.
+
+### Highest-Revenue Product
+
+Product: REGENCY CAKESTAND 3 TIER
+
+Total Sales: £7,717.95
+
+This product generated the highest sales value.
+
+### Highest-Volume Product
+
+Product: WORLD WAR 2 GLIDERS ASSTD DESIGNS
+
+Units Sold: 3,409
+
+This product sold the highest number of units.
+
+### Monthly Sales
+
+The analyzed sample contains transactions from December 2010.
+
+Total December 2010 Sales: £183,529.13
+
+Because the sample covers only one month, comparisons
+between months were not possible.
+
+## 7. Dashboard
+
+Created an Excel sales dashboard containing:
+
+- Total Sales KPI
+- Total Units Sold KPI
+- Unique Invoices KPI
+- Average Sales per Invoice KPI
+- Top 10 Products by Sales chart
+- Top 10 Products by Quantity chart
+- Sales by Country chart
+
+The dashboard was created using Microsoft Excel 2013,
+PivotTables, formulas, and charts.
+
+## 8. Limitations
+
+- The analysis uses a 10,000-row sample, not the full dataset.
+- The sample covers December 2010 only.
+- Cancelled transactions were excluded, so total sales
+  represent positive sales rather than net revenue after returns.
+- Missing Customer IDs were retained.
+- Results should not be generalized to the entire retail dataset.
+
+## 9. Conclusion
+
+The project demonstrates practical Excel skills in:
+
+- Data cleaning
+- Duplicate detection
+- Missing-value assessment
+- Data validation
+- Excel formulas
+- PivotTables
+- KPI reporting
+- Sales visualization
+- Dashboard development
+
+The final cleaned dataset retained 96.58% of the original
+sample and provided a foundation for sales performance analysis.

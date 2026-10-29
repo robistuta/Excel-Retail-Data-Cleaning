@@ -1,0 +1,37 @@
+# Dataset Source
+
+## Dataset Name
+Online Retail Dataset
+
+## Source
+UCI Machine Learning Repository
+
+## Dataset Link
+https://archive.ics.uci.edu/dataset/352/online+retail
+
+## Dataset Description
+The Online Retail dataset contains approximately 541,909
+transaction records from a UK-based online retailer.
+
+The dataset includes:
+- Invoice numbers
+- Product codes
+- Product descriptions
+- Quantities
+- Invoice dates
+- Unit prices
+- Customer IDs
+- Countries
+
+## Project Sample
+This project uses a sample of 10,000 transaction rows
+from the original dataset.
+
+After data cleaning, 9,658 rows remained.
+
+## Tools Used
+Microsoft Excel 2013
+
+## Note
+The original dataset belongs to its respective source.
+This project was created for educational and portfolio purposes.
