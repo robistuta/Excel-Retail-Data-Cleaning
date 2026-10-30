@@ -73,7 +73,7 @@ could still represent valid sales.
 | KPI | Result |
 |---|---:|
 | Total Sales | £183,529.13 |
-| Total Units Sold | 89,371 |
+| Total Units Sold | 89,731 |
 | Unique Invoices | 424 |
 | Average Sales per Invoice | £432.85 |
 | Average Sales per Transaction Row | £19.00 |
